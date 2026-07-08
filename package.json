@@ -1,0 +1,41 @@
+{
+  "name": "@ai-native-solutions/fallclaim-mcp",
+  "version": "1.0.0",
+  "description": "MCP server exposing the fallclaim UK claims-quantum engine over stdio. Tools for quantum calculation, JC bracket lookup, whiplash tariff, Ogden multipliers, protocol scheduling, Part 36 assessment, and T0 legal-knowledge lookup. Research aid, not legal advice.",
+  "license": "MIT",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "fallclaim-mcp": "src/index.js"
+  },
+  "files": ["src", "README.md", "LICENSE"],
+  "keywords": [
+    "mcp", "model-context-protocol", "claude",
+    "uk-law", "personal-injury", "claims", "quantum",
+    "judicial-college", "ogden", "whiplash", "part-36",
+    "fallclaim", "ai-native-solutions"
+  ],
+  "author": "AI-Native Solutions",
+  "homepage": "https://github.com/sjgant80-hub/fallclaim-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sjgant80-hub/fallclaim-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sjgant80-hub/fallclaim-mcp/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@ai-native-solutions/fallclaim-sdk": "^1.0.0",
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "smoke": "node -e \"import('./src/index.js').then(()=>console.log('mcp module loads ok')).catch(e=>{console.error(e);process.exit(1)})\""
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
